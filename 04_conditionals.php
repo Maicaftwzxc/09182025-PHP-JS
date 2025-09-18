@@ -72,8 +72,4 @@ switch ($day) {
     default:
         echo '<br>'.'Invalid Day';
 }
-
-
-
-
 ?>
