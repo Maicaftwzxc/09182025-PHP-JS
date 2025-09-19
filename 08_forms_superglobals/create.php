@@ -2,6 +2,7 @@
 
     $uploadsDir = 'uploads/';
     $contactsFile = 'contacts.json';
+    
 
    if ($_SERVER["REQUEST_METHOD"] == "POST") { //accept and validate data
         $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS); //to avoid any hacking on a website

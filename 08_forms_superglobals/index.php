@@ -1,8 +1,8 @@
 <?php
 
-    $contactFile = "contacts.json";
-    $contacts = file_exists($contactFile) ? json_decode(file_get_contents
-    ($contactFile), true) : [];
+    $contactsFile = "contacts.json";
+    $contacts = file_exists($contactsFile) ? json_decode(file_get_contents
+    ($contactsFile), true) : [];
    
 ?>
 

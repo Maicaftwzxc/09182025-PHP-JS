@@ -1,20 +1,14 @@
 [
     {
-        "name": "Mica",
-        "email": "mica@fake.com",
-        "phone": "1234567",
-        "image": "uploads\/1758244785_strawberry.png"
+        "name": "Leo",
+        "email": "leo@masarap.com",
+        "phone": "09876532784",
+        "image": "uploads\/1758251200_strawberry.png"
     },
     {
-        "name": "Mica",
-        "email": "mica@fake.com",
-        "phone": "1234567",
-        "image": "uploads\/1758249148_strawberry.png"
-    },
-    {
-        "name": "Mica",
-        "email": "mica@fake.com",
-        "phone": "1234567",
-        "image": "uploads\/1758249150_strawberry.png"
+        "name": "Jom",
+        "email": "jom@kumakalampag.com",
+        "phone": "123456798",
+        "image": "uploads\/1758251252_blackpink.jpg"
     }
 ]
