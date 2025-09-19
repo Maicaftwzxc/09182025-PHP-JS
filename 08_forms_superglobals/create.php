@@ -56,15 +56,19 @@
 <form action="" method="POST" enctype="multipart/form-data">
     <label>Name:</label>
     <input type="text" name="name" required>
+    <br>
 
     <label>Email:</label>
     <input type="text" name="email" required>
+    <br>
 
     <label>Phone:</label>
     <input type="text" name="phone" required>
+    <br>
 
     <label>Contact Image:</label>
     <input type="file" name="image" accept="image/*" required>
+    <br>
 
     <button type="submit">Add Contact</button>
 
