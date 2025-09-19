@@ -1,16 +1,9 @@
 <?php
 
-   if ($_SERVER["REQUEST_METHOD"] == "POST") { //accept and validate data
-        $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS); //to avoid any hacking on a website
-        $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
-        $phone = filter_input(INPUT_POST, "phone", FILTER_SANITIZE_NUMBER_INT);
-  
-            if ($name && $email && $phone) {
-                echo "Contact added: $name ($email, $phone)";
-            } else {
-                echo "Invalid input!";
-            }
-    }
+    $contactFile = "contacts.json";
+    $contacts = file_exists($contactFile) ? json_decode(file_get_contents
+    ($contactFile), true) : [];
+   
 ?>
 
 <!DOCTYPE html>
@@ -21,21 +14,20 @@
     <title>Document</title>
 </head>
 <body>
-<form action="" method="POST">
-    <label>Name:</label>
-    <input type="text" name="name" required>
+    <a href="create.php">Create new contact</a>
 
-    <label>Email:</label>
-    <input type="text" name="email" required>
+<ul>
+    <?php foreach ($contacts as $contact): ?>
+        <li>
+            <img src="<?php echo $contact['image']; ?>" height="150">
+            <?php echo "{$contact['name']} - {$contact['email']} - {$contact['phone']}
+            "; ?>
+            <a href="delete.php? name=<?php echo $contact['name']?>">
+                Delete
+            </a>
+        </li>
+    <?php endforeach; ?>           
 
-    <label>Phone:</label>
-    <input type="text" name="phone" required>
-
-    <label>Contact Image:</label>
-    <input type="file" name="image" accept="image/*" required>
-
-    <button type="submit">Add Contact</button>
-
-</form>
+</ul>
 </body>
 </html>
