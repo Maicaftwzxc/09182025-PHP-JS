@@ -9,8 +9,6 @@
     $body= $response->getBody();
     $data = json_decode($body);
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -2,7 +2,8 @@
 
     require 'vendor/autoload.php'; // file that registers all the thirdparty packages
 
-    use GuzzleHttp\Client;
+    use User\Testing\MyApp;
+/*  use GuzzleHttp\Client;
 
     $client =  new Client();
     $response = $client->request('GET' , 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
@@ -10,6 +11,8 @@
     $data = json_decode($body);
 
     echo 'Bitcoin price in USD: ' . $data->bitcoin->usd;
+*/
 
-
+$app = new MyApp();
+$app->run();
 ?>
