@@ -20,8 +20,8 @@ $pdo = require 'db.php';
                 $imagePath = $uploadsDir . $imageName;
 
                 if (move_uploaded_file($_FILES['image']['tmp_name'], $imagePath)) {
-                    $stmt = $pdo->prepare("INSERT INTO contacts (name, email, phoneimage)
-                    VALUES (:name, :email, :phone, :image");
+                    $stmt = $pdo->prepare("INSERT INTO contacts (name, email, phone,image)
+                    VALUES (:name, :email, :phone, :image)");
                     echo "Contact added: $name ($email, $phone)";
                     $stmt->execute([
                         ':name' =>$name,

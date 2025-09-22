@@ -1,6 +1,3 @@
 <footer>
-        Contact Information
+    Contact Information
 </footer>
-
-</body>
-</html>
