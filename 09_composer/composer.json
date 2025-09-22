@@ -2,7 +2,7 @@
     "name": "user/09_composer",
     "autoload": {
         "psr-4": {
-            "User\\09Composer\\": "src/"
+            "User\\Testing\\": "src/"
         }
     },
     "authors": [
@@ -11,7 +11,5 @@
             "email": "jamaricjes@gmail.com"
         }
     ],
-    "require": {
-        "guzzlehttp/guzzle": "^7.10"
-    }
+    "require": {}
 }
